@@ -1,0 +1,743 @@
+import discord
+from discord.ext import commands
+import sqlite3
+import datetime
+import asyncio
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import yt_dlp as youtube_dl
+import pyttsx3
+import os
+import re
+from ollama import Client
+import time
+import subprocess
+import shutil
+import sys
+import requests
+from bs4 import BeautifulSoup
+from urllib.parse import urlparse, parse_qs
+
+# === Dependency Checks ===
+def check_dependencies():
+    package_to_module = {
+        'discord.py': 'discord',
+        'torch': 'torch',
+        'transformers': 'transformers',
+        'yt-dlp': 'yt_dlp',
+        'pyttsx3': 'pyttsx3',
+        'ollama': 'ollama',
+        'requests': 'requests',
+        'beautifulsoup4': 'bs4',
+    }
+    required_packages = list(package_to_module.keys())
+    missing_packages = []
+    for package in required_packages:
+        module_name = package_to_module[package]
+        try:
+            module = __import__(module_name)
+            print(f"Found package: {package} (module: {module.__name__}, version: {getattr(module, '__version__', 'unknown')})")
+        except ImportError as e:
+            print(f"Could not import {package} (tried module {module_name}): {e}")
+            missing_packages.append(package)
+    
+    if missing_packages:
+        print(f"Error: Missing required Python packages: {', '.join(missing_packages)}")
+        print("Please install them using:")
+        print(f"    {sys.executable} -m pip install {' '.join(missing_packages)}")
+        print("Warning: Proceeding despite missing packages. This may cause runtime errors.")
+
+    # Check FFmpeg
+    if not shutil.which('ffmpeg'):
+        print("Error: FFmpeg is not found in your system PATH.")
+        print("Please install FFmpeg and ensure it's accessible in your PATH:")
+        print("    - Windows: Download from https://ffmpeg.org/download.html and add to PATH")
+        print("    - Linux: sudo apt-get install ffmpeg")
+        print("    - macOS: brew install ffmpeg")
+        sys.exit(1)
+
+# Run dependency checks
+check_dependencies()
+
+# === Setup Discord Bot ===
+INTENTS = discord.Intents.default()
+INTENTS.message_content = True
+INTENTS.voice_states = True
+INTENTS.members = True
+
+bot = commands.Bot(command_prefix='!', intents=INTENTS)
+bot.remove_command('help')
+
+# === Setup TinyLlama Model (Fallback) ===
+model_name = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+tinyllama_tokenizer = AutoTokenizer.from_pretrained(model_name)
+tinyllama_model = AutoModelForCausalLM.from_pretrained(model_name)
+
+# === Response Cache for Common Queries ===
+response_cache = {
+    "hello": "Hey! How can I help you today?",
+    "hi": "Hi there! What's up?",
+    "hey": "Hey! What do you want to talk about?"
+}
+
+# === Setup Local LLM with Ollama ===
+class LocalLLM:
+    def __init__(self):
+        self.client = Client()
+        self.model = "aichris:latest"
+        self.api_key = None
+        self.available_models = self.list_models()
+        self.check_gpu_usage()
+
+    def list_models(self):
+        try:
+            response = self.client.list()
+            models = [model["name"] for model in response["models"]]
+            print(f"Available Ollama models: {models}")
+            if self.model not in models:
+                print(f"Error: Model '{self.model}' not found in Ollama. Available models: {models}")
+                print("Consider using a smaller model if latency persists.")
+            return models
+        except Exception as e:
+            print(f"Error listing Ollama models: {e}")
+            return []
+
+    def check_gpu_usage(self):
+        try:
+            result = subprocess.run(['nvidia-smi', '--query-compute-apps=pid,process_name,used_memory', '--format=csv'], 
+                                  capture_output=True, text=True)
+            output = result.stdout
+            if 'ollama' in output.lower():
+                print("Ollama is using the GPU! GPU usage details:")
+                print(output)
+            else:
+                print("Ollama is not using the GPU. It might be running on CPU. Ensure CUDA and drivers are installed.")
+        except Exception as e:
+            print(f"Error checking GPU usage: {e}")
+            print("Ensure 'nvidia-smi' is available and Ollama is configured to use the GPU.")
+
+    def generate(self, prompt, max_new_tokens=50, temperature=0.6):
+        start_time = time.time()
+        try:
+            options = {
+                "max_tokens": max_new_tokens,
+                "temperature": temperature
+            }
+            if self.api_key:
+                headers = {"Authorization": f"Bearer {self.api_key}"}
+                response = self.client.generate(
+                    model=self.model,
+                    prompt=prompt,
+                    options=options,
+                    headers=headers
+                )
+            else:
+                response = self.client.generate(
+                    model=self.model,
+                    prompt=prompt,
+                    options=options
+                )
+            end_time = time.time()
+            print(f"Ollama generation took {end_time - start_time:.2f} seconds")
+            return response["response"].strip()
+        except Exception as e:
+            end_time = time.time()
+            print(f"Error with Ollama model '{self.model}': {e}")
+            print(f"Ollama generation failed after {end_time - start_time:.2f} seconds")
+            return None
+
+local_llm = LocalLLM()
+
+# === Setup SQLite Memory ===
+conn = sqlite3.connect('memory.db')
+c = conn.cursor()
+try:
+    c.execute('DROP TABLE IF EXISTS memory')
+    c.execute('''
+        CREATE TABLE memory (
+            user_id TEXT,
+            timestamp TEXT,
+            message TEXT,
+            is_bot INTEGER
+        )
+    ''')
+    c.execute('''
+        CREATE TABLE IF NOT EXISTS user_roles (
+            user_id TEXT PRIMARY KEY,
+            role TEXT
+        )
+    ''')
+    c.execute('''
+        CREATE TABLE IF NOT EXISTS tts_preferences (
+            user_id TEXT PRIMARY KEY,
+            voice_id TEXT,
+            rate INTEGER,
+            volume REAL
+        )
+    ''')
+    c.execute('''
+        CREATE TABLE IF NOT EXISTS knowledge (
+            question TEXT,
+            answer TEXT
+        )
+    ''')
+    conn.commit()
+except sqlite3.Error as e:
+    print(f"Error creating tables: {e}")
+
+def save_message(user_id, message, is_bot=0):
+    try:
+        c.execute('INSERT INTO memory (user_id, timestamp, message, is_bot) VALUES (?, ?, ?, ?)',
+                  (user_id, datetime.datetime.now().isoformat(), message, is_bot))
+        conn.commit()
+    except sqlite3.Error as e:
+        print(f"Error saving message: {e}")
+
+def get_conversation(user_id, limit=5):
+    start_time = time.time()
+    try:
+        c.execute('SELECT message, is_bot FROM memory WHERE user_id = ? ORDER BY timestamp DESC LIMIT ?', (user_id, limit))
+        results = c.fetchall()
+        if results:
+            conversation = "\n".join(f"{'Bot' if row[1] else 'User'}: {row[0]}" for row in reversed(results))
+            end_time = time.time()
+            print(f"Retrieving conversation history took {end_time - start_time:.2f} seconds")
+            print(f"Conversation history for {user_id}: {conversation}")
+            return conversation
+        return ""
+    except sqlite3.Error as e:
+        print(f"Error retrieving conversation: {e}")
+        return ""
+
+def set_user_role(user_id, role):
+    try:
+        c.execute('INSERT OR REPLACE INTO user_roles (user_id, role) VALUES (?, ?)', (user_id, role))
+        conn.commit()
+    except sqlite3.Error as e:
+        print(f"Error setting user role: {e}")
+
+def get_user_role(user_id):
+    try:
+        c.execute('SELECT role FROM user_roles WHERE user_id = ?', (user_id,))
+        result = c.fetchone()
+        return result[0] if result else None
+    except sqlite3.Error as e:
+        print(f"Error getting user role: {e}")
+        return None
+
+def set_tts_preferences(user_id, voice_id, rate, volume):
+    try:
+        c.execute('INSERT OR REPLACE INTO tts_preferences (user_id, voice_id, rate, volume) VALUES (?, ?, ?, ?)',
+                  (user_id, voice_id, rate, volume))
+        conn.commit()
+    except sqlite3.Error as e:
+        print(f"Error setting TTS preferences: {e}")
+
+def get_tts_preferences(user_id):
+    try:
+        c.execute('SELECT voice_id, rate, volume FROM tts_preferences WHERE user_id = ?', (user_id,))
+        result = c.fetchone()
+        return result if result else (None, 200, 1.0)
+    except sqlite3.Error as e:
+        print(f"Error getting TTS preferences: {e}")
+        return (None, 200, 1.0)
+
+def add_knowledge(question, answer):
+    try:
+        c.execute('INSERT INTO knowledge (question, answer) VALUES (?, ?)', (question.lower(), answer))
+        conn.commit()
+    except sqlite3.Error as e:
+        print(f"Error adding knowledge: {e}")
+
+def get_knowledge(question):
+    try:
+        c.execute('SELECT answer FROM knowledge WHERE question = ?', (question.lower(),))
+        result = c.fetchone()
+        return result[0] if result else None
+    except sqlite3.Error as e:
+        print(f"Error getting knowledge: {e}")
+        return None
+
+# === Scrape Wikipedia Information ===
+def lookup_wikipedia(query):
+    start_time = time.time()
+
+    cached_info = get_knowledge(f"what is {query.lower()}?")
+    if cached_info:
+        end_time = time.time()
+        print(f"Used cached data for {query}, took {end_time - start_time:.2f} seconds")
+        return f"This is a cached result from Wikipedia.\n{cached_info}"
+
+    try:
+        query_formatted = query.replace(" ", "_")
+        url = f"https://en.wikipedia.org/wiki/{query_formatted}"
+        headers = {
+            "User-Agent": "AIChrisBot/1.0 (https://example.com/aichrisbot; aichrisbot@example.com)"
+        }
+        response = requests.get(url, headers=headers, timeout=10)
+        if response.status_code != 200:
+            end_time = time.time()
+            print(f"Wikipedia scrape took {end_time - start_time:.2f} seconds")
+            return f"No Wikipedia page found for '{query}'."
+
+        soup = BeautifulSoup(response.text, 'html.parser')
+        title_tag = soup.find('h1', id='firstHeading')
+        if not title_tag:
+            return f"No Wikipedia page found for '{query}'."
+        
+        title = title_tag.text
+        content = soup.find('div', id='mw-content-text')
+        if not content:
+            end_time = time.time()
+            print(f"Wikipedia scrape took {end_time - start_time:.2f} seconds")
+            return f"No Wikipedia page found for '{query}'."
+
+        summary = ""
+        for element in content.find_all('p'):
+            if element.text.strip() and not element.find_parents('table'):
+                summary = element.text.strip()
+                break
+
+        if not summary:
+            end_time = time.time()
+            print(f"Wikipedia scrape took {end_time - start_time:.2f} seconds")
+            return f"No Wikipedia page found for '{query}'."
+
+        summary = re.sub(r'\[\d+\]', '', summary)
+        summary = summary[:500] + "..." if len(summary) > 500 else summary
+
+        add_knowledge(f"what is {query.lower()}?", f"{title}: {summary}")
+
+        end_time = time.time()
+        print(f"Wikipedia scrape took {end_time - start_time:.2f} seconds")
+
+        return (f"Found on Wikipedia:\n"
+                f"Title: {title}\n"
+                f"Summary: {summary}\n"
+                f"I've stored this information for future reference.")
+
+    except Exception as e:
+        end_time = time.time()
+        print(f"Error scraping {query} from Wikipedia: {e}")
+        print(f"Wikipedia scrape took {end_time - start_time:.2f} seconds")
+        return f"Error: Failed to fetch information for '{query}' from Wikipedia."
+
+# === Dialogue State Management ===
+def get_dialogue_state(message):
+    message = message.lower()
+    if any(g in message for g in ["hello", "hi", "hey"]):
+        return "greeting"
+    elif "?" in message:
+        if "who is" in message:
+            return "who_is"
+        return "question"
+    elif any(k in message for k in ["furry", "game", "music", "movie"]):
+        return "topic"
+    elif any(k in message for k in ["sell", "selling", "buy"]):
+        return "commerce"
+    return "general"
+
+# === Extract and Store Self-Descriptions ===
+def extract_self_description(message, username):
+    message_lower = message.lower()
+    if "i am" in message_lower or "i'm" in message_lower:
+        description = message.split(" ", 2)[-1]
+        add_knowledge(f"who is {username.lower()}?", description)
+        print(f"Stored self-description for {username}: {description}")
+
+# === Generate Smart Reply ===
+async def generate_reply(user_message, conversation_history, username, temperature=0.6, role=None):
+    start_time = time.time()
+
+    user_message_lower = user_message.lower().strip()
+    if user_message_lower in response_cache:
+        reply = response_cache[user_message_lower].replace("USERNAME", username)
+        end_time = time.time()
+        print(f"Used cached response, took {end_time - start_time:.2f} seconds")
+        return reply
+
+    knowledge_answer = get_knowledge(user_message_lower)
+    if knowledge_answer:
+        end_time = time.time()
+        print(f"Used knowledge base, took {end_time - start_time:.2f} seconds")
+        return knowledge_answer
+
+    dialogue_state = get_dialogue_state(user_message)
+    system_prompt = (
+        f"You are AI Chris, a helpful Discord bot for {username}. "
+        f"Dialogue state: {dialogue_state}. "
+        "Reply naturally, keeping responses short (1-2 sentences)."
+    )
+    if role:
+        system_prompt = (
+            f"You are AI Chris, acting as a {role} for {username}. "
+            f"Dialogue state: {dialogue_state}. "
+            "Reply in character, keeping responses short (1-2 sentences)."
+        )
+
+    if conversation_history:
+        prompt = f"{system_prompt}\n\nHistory:\n{conversation_history}\nUser: {user_message}\nBot:"
+    else:
+        prompt = f"{system_prompt}\n\nUser: {user_message}\nBot:"
+    
+    print(f"Prompt: {prompt}")
+
+    reply = local_llm.generate(prompt, max_new_tokens=50, temperature=temperature)
+    if reply:
+        print(f"Ollama LLM reply: {reply}")
+    else:
+        print("Ollama failed, using hardcoded fallback")
+
+    # Use fallback only if the reply is None or empty
+    if reply is None or reply.strip() == "":
+        if dialogue_state == "greeting":
+            reply = f"Hey {username}! What's up?"
+        elif dialogue_state == "who_is":
+            target_user = user_message_lower.split("who is ")[1].split("?")[0].strip()
+            knowledge_answer = get_knowledge(f"what is {target_user}?")
+            if knowledge_answer:
+                reply = knowledge_answer
+            else:
+                reply = f"I'm not sure who {target_user} is—maybe you can tell me more about them or try !lookup {target_user}?"
+        elif dialogue_state == "question":
+            reply = "Could you clarify that question a bit?"
+        elif dialogue_state == "commerce":
+            reply = "I'm just here to chat, not sell anything! What's on your mind?"
+        elif dialogue_state == "topic":
+            reply = f"Cool, {user_message.split()[0]} sounds fun! Tell me more!"
+        else:
+            reply = "Hmm, not sure I caught that—could you say more?"
+
+    end_time = time.time()
+    print(f"Total reply generation took {end_time - start_time:.2f} seconds")
+    return reply
+
+# === Voice System ===
+async def tts_play(vc, text, user_id):
+    start_time = time.time()
+    voice_id, rate, volume = get_tts_preferences(user_id)
+    wav_filename = "tts_output.wav"
+
+    for _ in range(3):
+        try:
+            engine = pyttsx3.init()
+            break
+        except Exception as e:
+            print(f"Error initializing pyttsx3, retrying: {e}")
+            await asyncio.sleep(1)
+    else:
+        print("Failed to initialize pyttsx3 after retries")
+        return
+
+    if not voice_id:
+        voices = engine.getProperty('voices')
+        male_voices = [v for v in voices if any(name in v.name.lower() for name in ['david', 'mark'])]
+        voice_id = next((v.id for v in male_voices if 'david' in v.name.lower()), voices[0].id if voices else None)
+    
+    if voice_id:
+        try:
+            engine.setProperty('voice', voice_id)
+        except Exception as e:
+            print(f"Error setting voice ID {voice_id}: {e}")
+            return
+    
+    engine.setProperty('rate', rate)
+    engine.setProperty('volume', volume)
+    
+    try:
+        engine.save_to_file(text, wav_filename)
+        engine.runAndWait()
+    except Exception as e:
+        print(f"Error generating TTS with pyttsx3: {e}")
+        return
+    finally:
+        engine.stop()
+
+    if vc and vc.is_connected():
+        try:
+            audio_source = discord.FFmpegPCMAudio(wav_filename)
+            vc.play(audio_source)
+            while vc.is_playing():
+                await asyncio.sleep(0.1)
+        except Exception as e:
+            print(f"Error playing TTS through Discord: {e}")
+
+    if not vc or not vc.is_connected():
+        try:
+            subprocess.run(['ffmpeg', '-i', wav_filename, '-f', 'wav', '-acodec', 'pcm_s16le', '-ar', '44100', '-ac', '2', 'virtual_cable_input.wav'], check=True, timeout=5)
+            print(f"TTS saved to {wav_filename} and routed to virtual cable")
+        except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as e:
+            print(f"Error routing audio to virtual cable: {e}")
+
+    if os.path.exists(wav_filename):
+        try:
+            os.remove(wav_filename)
+        except Exception as e:
+            print(f"Error removing {wav_filename}: {e}")
+
+    end_time = time.time()
+    print(f"TTS generation and playback took {end_time - start_time:.2f} seconds")
+
+# === Music Player ===
+music_queue = []
+
+async def play_next(ctx):
+    if music_queue:
+        url = music_queue.pop(0)
+        YDL_OPTIONS = {'format': 'bestaudio', 'noplaylist':'True'}
+        FFMPEG_OPTIONS = {'options': '-vn'}
+        try:
+            with youtube_dl.YoutubeDL(YDL_OPTIONS) as ydl:
+                info = ydl.extract_info(url, download=False)
+                url2 = info['url']
+                source = await discord.FFmpegOpusAudio.from_probe(url2, **FFMPEG_OPTIONS)
+                ctx.voice_client.play(source, after=lambda e: asyncio.run_coroutine_threadsafe(play_next(ctx), bot.loop))
+                await ctx.send(f"Now playing: {info.get('title', 'music')}")
+        except Exception as e:
+            await ctx.send(f"Error playing next track: {e}")
+
+# === Commands ===
+@bot.command()
+async def join(ctx):
+    if ctx.author.voice:
+        channel = ctx.author.voice.channel
+        await channel.connect()
+        await ctx.send(f"Joined {channel}!")
+    else:
+        await ctx.send("You are not connected to a voice channel!")
+
+@bot.command()
+async def play(ctx, url):
+    if not ctx.voice_client:
+        await ctx.invoke(bot.get_command('join'))
+    music_queue.append(url)
+    await ctx.send(f"Added to queue: {url}")
+    if not ctx.voice_client.is_playing():
+        await play_next(ctx)
+
+@bot.command()
+async def queue(ctx):
+    if music_queue:
+        await ctx.send("Queued songs:\n" + "\n".join(music_queue))
+    else:
+        await ctx.send("The music queue is empty.")
+
+@bot.command()
+async def pause(ctx):
+    if ctx.voice_client and ctx.voice_client.is_playing():
+        ctx.voice_client.pause()
+        await ctx.send("Paused the music!")
+    else:
+        await ctx.send("No music is currently playing!")
+
+@bot.command()
+async def resume(ctx):
+    if ctx.voice_client and ctx.voice_client.is_paused():
+        ctx.voice_client.resume()
+        await ctx.send("Resumed the music!")
+    else:
+        await ctx.send("Music is not paused!")
+
+@bot.command()
+async def stop(ctx):
+    if ctx.voice_client:
+        music_queue.clear()
+        ctx.voice_client.stop()
+        await ctx.send("Stopped the music and cleared the queue!")
+    else:
+        await ctx.send("Not connected to a voice channel!")
+
+@bot.command()
+async def leave(ctx):
+    if ctx.voice_client:
+        music_queue.clear()
+        await ctx.voice_client.disconnect()
+        await ctx.send("Disconnected from the voice channel!")
+    else:
+        await ctx.send("Not connected to a voice channel!")
+
+@bot.command()
+async def setrole(ctx, *, role):
+    user_id = str(ctx.author.id)
+    set_user_role(user_id, role)
+    await ctx.send(f"Role set to: {role}")
+
+@bot.command()
+async def clearhistory(ctx):
+    user_id = str(ctx.author.id)
+    try:
+        c.execute('DELETE FROM memory WHERE user_id = ?', (user_id,))
+        conn.commit()
+        await ctx.send("Your conversation history has been cleared!")
+    except sqlite3.Error as e:
+        await ctx.send(f"Error clearing history: {e}")
+
+@bot.command()
+@commands.has_role('Trusted')
+async def addknowledge(ctx, *, question_and_answer):
+    try:
+        question, answer = question_and_answer.split("|")
+        add_knowledge(question.strip(), answer.strip())
+        await ctx.send(f"Added to knowledge base: '{question}' -> '{answer}'")
+    except ValueError:
+        await ctx.send("Please provide question and answer separated by '|', e.g., `!addknowledge what's your name? | I'm AI Chris!`")
+
+@bot.command()
+async def lookup(ctx, *, query: str):
+    async with ctx.typing():
+        result = lookup_wikipedia(query)
+    await ctx.send(result)
+
+@bot.command()
+async def setttsvoice(ctx, voice_name: str = "David", rate: str = "200", volume: str = "1.0"):
+    user_id = str(ctx.author.id)
+    engine = pyttsx3.init()
+    voices = engine.getProperty('voices')
+    voice_id = None
+    
+    male_voices = [v for v in voices if any(name in v.name.lower() for name in ['david', 'mark'])]
+    if not male_voices:
+        await ctx.send("No male voices found. Using default system voice.")
+        voice_id = voices[0].id if voices else None
+    else:
+        for voice in male_voices:
+            if voice_name.lower() in voice.name.lower():
+                voice_id = voice.id
+                break
+        if not voice_id:
+            voice_names = [v.name for v in male_voices]
+            await ctx.send(f"Invalid male voice. Choose from: {', '.join(voice_names)}")
+            return
+    
+    try:
+        rate_value = int(rate)
+        rate_value = min(max(rate_value, 50), 400)
+    except ValueError:
+        await ctx.send("Rate must be a number between 50 and 400 (e.g., 200).")
+        return
+    
+    try:
+        volume_value = float(volume)
+        volume_value = min(max(volume_value, 0.0), 1.0)
+    except ValueError:
+        await ctx.send("Volume must be a number between 0.0 and 1.0 (e.g., 1.0).")
+        return
+    
+    if voice_id:
+        try:
+            engine.setProperty('voice', voice_id)
+        except Exception as e:
+            print(f"Error setting voice ID {voice_id}: {e}")
+            await ctx.send("Error setting the voice. Using default settings.")
+            return
+    
+    engine.setProperty('rate', rate_value)
+    engine.setProperty('volume', volume_value)
+    
+    set_tts_preferences(user_id, voice_id, rate_value, volume_value)
+    await ctx.send(f"TTS voice set to {voice_name if voice_id else 'default'}, rate {rate_value}, volume {volume_value}.")
+
+@bot.command()
+async def listttsvoices(ctx):
+    engine = pyttsx3.init()
+    voices = engine.getProperty('voices')
+    male_voices = [v for v in voices if any(name in v.name.lower() for name in ['david', 'mark'])]
+    if not male_voices:
+        await ctx.send("No male voices found on this system.")
+    else:
+        voice_names = [v.name for v in male_voices]
+        await ctx.send(f"Available male TTS voices: {', '.join(voice_names)}")
+
+@bot.command()
+async def help(ctx):
+    await ctx.send(
+        "AI Chris Commands:\n"
+        "!setttsvoice [voice_name] [rate] [volume] - Set male TTS voice (e.g., 'David', 'Mark'), rate (50-400), volume (0.0-1.0)\n"
+        "!listttsvoices - List available male TTS voices\n"
+        "!setrole <role> - Set my role (e.g., YouTube streamer)\n"
+        "!clearhistory - Clear your conversation history\n"
+        "!addknowledge <question> | <answer> - Add to my knowledge base (Trusted users only)\n"
+        "!lookup <term> - Look up a term on Wikipedia\n"
+        "!join - Join your voice channel\n"
+        "!play <YouTube URL> - Play music\n"
+        "!queue - Show music queue\n"
+        "!pause, !resume, !stop, !leave - Music controls\n"
+        "Just chat with me for a conversation! (e.g., 'hello', 'how are you?')"
+    )
+
+# === Event Handlers ===
+@bot.event
+async def on_ready():
+    print(f'Logged in as {bot.user}!')
+    # Log available commands for debugging
+    print("Registered commands:", [command.name for command in bot.commands])
+
+@bot.event
+async def on_member_join(member):
+    channel = discord.utils.get(member.guild.voice_channels, name="General")
+    if channel:
+        vc = await channel.connect()
+        await tts_play(vc, f"Welcome {member.name} to the server!", member.id)
+        await vc.disconnect()
+
+@bot.event
+async def on_message(message):
+    if message.author == bot.user:
+        return
+    if message.content.startswith('!'):
+        print(f"Processing command: {message.content}")
+        await bot.process_commands(message)
+        return
+
+    user_id = str(message.author.id)
+    username = message.author.name
+    user_message = message.content
+    role = get_user_role(user_id)
+    role_match = re.match(r'(?:take the role of|act as) (.+)', user_message, re.IGNORECASE)
+    if role_match:
+        new_role = role_match.group(1).strip()
+        set_user_role(user_id, new_role)
+        reply = f"Alright, I'm now acting as a {new_role}!"
+        save_message(user_id, user_message, is_bot=0)
+        save_message(user_id, reply, is_bot=1)
+        await message.channel.send(reply)
+        if message.guild.voice_client and message.guild.voice_client.is_connected():
+            await tts_play(message.guild.voice_client, reply, user_id)
+        return
+
+    extract_self_description(user_message, username)
+    save_message(user_id, user_message, is_bot=0)
+    conversation_history = get_conversation(user_id)
+    async with message.channel.typing():
+        reply = await generate_reply(user_message, conversation_history, username, temperature=0.6, role=role)
+    
+    if not reply.strip():
+        reply = "Oops, I don't know what to say!"
+    if len(reply) > 2000:
+        reply = reply[:1997] + "..."
+
+    try:
+        await message.channel.send(reply)
+        save_message(user_id, reply, is_bot=1)
+    except discord.errors.HTTPException as e:
+        if e.status == 429:
+            await asyncio.sleep(2)
+            await message.channel.send(reply)
+            save_message(user_id, reply, is_bot=1)
+        else:
+            print(f"Error sending message: {e}")
+    except Exception as e:
+        print(f"Error sending message: {e}")
+
+    if message.guild.voice_client and message.guild.voice_client.is_connected():
+        await tts_play(message.guild.voice_client, reply, user_id)
+    else:
+        await asyncio.sleep(1)
+
+@bot.event
+async def on_close():
+    conn.close()
+    print("Database connection closed.")
+
+# === Run the Bot ===
+bot.run('YOUR_DISCORD_BOT_TOKEN_HERE')
