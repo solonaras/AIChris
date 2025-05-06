@@ -47,7 +47,7 @@ Invite the bot to your server with the necessary permissions (e.g., message cont
 
 6. Start Ollama
 
-Ensure Ollama is running locally (http://localhost:11434).
+Ensure Ollama is running locally (http://localhost:123456). put your own local host.
 Pull the aichris:latest model:ollama pull aichris:latest
 
 
@@ -63,7 +63,7 @@ Commands
 !clearhistory - Clear your conversation history.
 !addknowledge <question> | <answer> - Add to knowledge base (Trusted role only).
 !lookup <term> - Look up a term on Wikipedia.
-!startytchatdirect <video_id> - Monitor YouTube live chat (e.g., !startytchatdirect CH6sFXCF_Nc).
+!startytchatdirect <video_id> - Monitor YouTube live chat (e.g., !startytchatdirect stream id).
 !join - Join your voice channel.
 !play <YouTube URL> - Play music.
 !queue - Show music queue.
