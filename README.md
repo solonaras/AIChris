@@ -80,4 +80,4 @@ Ollama Issues: Verify Ollama is running and the model is pulled.
 Contributing
 Feel free to fork this repository, submit issues, or pull requests to improve the bot!
 License
-- See the LICENSE file for details.
+Apache License 2.0 - See the LICENSE file for details.
