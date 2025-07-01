@@ -1,0 +1,30 @@
+# Core
+asyncio
+discord.py
+python-dotenv
+requests
+PyQt5
+Pillow
+pygame
+
+# AI & Machine Learning
+numpy
+noisereduce
+webrtcvad
+sounddevice
+
+# Audio/Video Processing
+edge-tts
+yt-dlp
+pyttsx3
+pyaudio
+moviepy
+mutagen
+
+# Web & APIs
+selenium
+webdriver-manager
+websocket-client
+
+# Social
+twitchio 

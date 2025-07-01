@@ -1,0 +1,67 @@
+# Environment variables and secrets
+.env
+*.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Databases and state files
+*.db
+*.sqlite
+*.sqlite3
+*.jsonl
+*.migrated
+aichris_memory.db
+chatbot_state.json
+psychology_state.json
+goals_state.json
+knowledge_base.json
+core_beliefs.json
+core_values.json
+values.json
+podcast_config.json
+shared_context.txt
+agent_statement.txt
+
+# Media and generated content
+*.mp4
+*.mp3
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.veado
+generated_videos/
+quote_images/
+web_ui/
+youtube*/
+node_modules/
+package*.json
+
+# Large binaries and tools
+cmake*/
+ffmpeg*/
+yolov8n.pt
+*.exe
+*.dll
+
+# Discord, YouTube, and web-related files
+discord_bot.py
+youtube.py
+twitch.py
+music_bot.py
+web_server.py
+app.js
+
+# OS-specific
+.DS_Store
+Thumbs.db
+*.log 
