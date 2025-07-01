@@ -47,7 +47,7 @@ from commands import CommandHandler
 # Add this near the top of the file with other constants
 CHATBOT_STATE_FILE = "chatbot_state.json"
 CHATBOT_SUMMARY_KEY = "main_gui_summary"
-DISCORD_COMMAND_CHANNEL_ID = "1387208152029859860"  # Same as in discord_bot.py
+DISCORD_COMMAND_CHANNEL_ID = ""  # Same as in discord_bot.py
 
 # Set ffmpeg path for Whisper
 ffmpeg_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ffmpeg-2025-03-24-git-cbbc927a67-essentials_build", "bin", "ffmpeg.exe")
@@ -59,7 +59,7 @@ import whisper
 LONG_TERM_MEMORY_FILE = "memory.jsonl"
 SHORT_TERM_MEMORY_LIMIT = 10
 # OLLAMA_URL is now configured via .env and used by the bridge/bots directly if needed
-OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434/api/chat")
+OLLAMA_URL = os.getenv("OLLAMA_URL", "")
 OLLAMA_MODEL = "nemotron-mini:4b"
 # Discord functionality is now handled by the app.js bridge
 # DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/your_webhook_id/your_webhook_token"
