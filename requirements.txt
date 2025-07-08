@@ -21,6 +21,8 @@ moviepy
 mutagen
 
 # Web & APIs
+flask
+flask_socketio
 selenium
 webdriver-manager
 websocket-client
