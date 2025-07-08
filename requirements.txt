@@ -17,7 +17,6 @@ sounddevice
 edge-tts
 yt-dlp
 pyttsx3
-pyaudio
 moviepy
 mutagen
 
