@@ -35,7 +35,7 @@ from PyQt5.QtGui import QFont, QColor, QPalette, QTextCursor
 from PyQt5.QtCore import Qt, pyqtSignal, QTimer
 from mutagen.mp3 import MP3
 from avatar import AvatarWindow, AVATAR_CLOSED_PATH, AVATAR_OPEN_PATH
-import websocket
+import websocket as ws_client
 import webrtcvad
 from twitch import TwitchChatBot
 import discord_bot
@@ -43,11 +43,13 @@ import web_server
 from aichris_mind import Mind
 from database_engine import DatabaseEngine
 from commands import CommandHandler
+import discord
+from dotenv import load_dotenv
 
 # Add this near the top of the file with other constants
 CHATBOT_STATE_FILE = "chatbot_state.json"
 CHATBOT_SUMMARY_KEY = "main_gui_summary"
-DISCORD_COMMAND_CHANNEL_ID = ""  # Same as in discord_bot.py
+DISCORD_COMMAND_CHANNEL_ID = "1387208152029859860"  # Same as in discord_bot.py
 
 # Set ffmpeg path for Whisper
 ffmpeg_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ffmpeg-2025-03-24-git-cbbc927a67-essentials_build", "bin", "ffmpeg.exe")
@@ -59,8 +61,8 @@ import whisper
 LONG_TERM_MEMORY_FILE = "memory.jsonl"
 SHORT_TERM_MEMORY_LIMIT = 10
 # OLLAMA_URL is now configured via .env and used by the bridge/bots directly if needed
-OLLAMA_URL = os.getenv("OLLAMA_URL", "")
-OLLAMA_MODEL = "nemotron-mini:4b"
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434/api/chat")
+OLLAMA_MODEL = "dolphin-mistral:latest"
 # Discord functionality is now handled by the app.js bridge
 # DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/your_webhook_id/your_webhook_token"
 # DISCORD_COMMAND_CHANNEL_ID = "your_channel_id"
@@ -220,6 +222,31 @@ class ChatBot(QWidget):
         # Initialize last activity time
         self.last_activity_time = time.time()
         self.is_in_conversation = False
+
+        self.twitch_bot = None
+        self._init_twitch_bot()
+
+    def _init_twitch_bot(self):
+        TWITCH_TOKEN = "oauth:dsk75m1kegkgya4iu849bssqfkc3kf"
+        TWITCH_CHANNEL = "Solonaras"
+        def on_twitch_message(author, content, channel_name):
+            # Generate a reply using the main AI Chris logic
+            def ai_reply_worker():
+                try:
+                    future = asyncio.run_coroutine_threadsafe(
+                        self.mind.generate_chat_response(author, author, content, []),
+                        self.async_loop
+                    )
+                    response_data = future.result(timeout=60)
+                    if response_data and "reply" in response_data:
+                        reply = response_data["reply"]
+                        if self.twitch_bot:
+                            self.twitch_bot.send_message(channel_name, reply)
+                except Exception as e:
+                    print(f"Error generating Twitch reply: {e}")
+            threading.Thread(target=ai_reply_worker, daemon=True).start()
+        self.twitch_bot = TwitchChatBot(TWITCH_TOKEN, [TWITCH_CHANNEL], on_twitch_message)
+        threading.Thread(target=self.twitch_bot.run, daemon=True).start()
 
     def closeEvent(self, event):
         """Handles the window closing event to save the final summary."""
@@ -1220,18 +1247,28 @@ class ChatBot(QWidget):
 
     def init_discord_bot(self):
         """Initialize and run the Discord bot in a separate thread."""
+        print("\n--- main.py: Initializing Discord Bot ---")
         # Establish the bridge by passing this ChatBot instance to the bot module
         discord_bot.setup_bridge(self)
         
         def run_bot():
             try:
-                print("Starting Discord command bot...")
+                print("Starting Discord command bot thread...")
+                if not discord_bot.DISCORD_TOKEN:
+                    print("❌ BOT START CANCELED: No token found in discord_bot module.")
+                    return
+                print("✅ Token found. Calling bot.run()...")
                 discord_bot.bot.run(discord_bot.DISCORD_TOKEN)
+            except discord.errors.LoginFailure:
+                print("\n" + "#"*50)
+                print("❌ LOGIN FAILED: The token in your .env file is invalid.")
+                print("Please reset your token in the Discord Developer Portal and try again.")
+                print("#"*50 + "\n")
             except Exception as e:
-                print(f"Error running Discord bot: {e}")
+                print(f"❌ An unexpected error occurred while running the Discord bot: {e}")
 
         threading.Thread(target=run_bot, daemon=True).start()
-        print("Discord bot thread started.")
+        print("✅ Discord bot thread has been launched.")
 
     def run_migration_from_json(self):
         """One-time migration for chatbot_state.json."""

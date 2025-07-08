@@ -1,0 +1,975 @@
+{"timestamp": 1750816560.00333, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750816562.2218368, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750817187.3077776, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750817189.8642619, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750817814.1102984, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750817819.3136191, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750817824.0153923, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750817825.2634306, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750817827.281335, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750817829.9460373, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750820801.564884, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750820803.4931588, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750820846.7672405, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750820849.1538289, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750823335.0403523, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750823487.4290318, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750823488.6042402, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750823532.063792, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750823532.676592, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750823589.9868815, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750823591.146614, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750823591.9374251, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750823592.6758645, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750823623.4996548, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750823624.9011514, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750823629.5640953, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750823630.2743976, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750823645.2516978, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750823648.4988642, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750823651.1023428, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750823655.5336869, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750823664.0718884, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750823792.8968768, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750823800.8176417, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750823807.5199704, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750823898.6891448, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750823899.4683807, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750823907.0609148, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750823923.1925306, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750823939.6640902, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750824101.098595, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750824102.019665, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750824144.3636446, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750824146.6501918, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750877242.072027, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750877246.859072, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750877250.2672193, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750894891.534492, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750894892.218843, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750895596.054849, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750924676.8723114, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750924678.8537521, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750924712.298499, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750924713.3675282, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750927625.1909757, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750927899.5208092, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750927901.0915947, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750939487.8328285, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750939488.8996615, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750957717.1469085, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750957722.291466, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750957757.9554915, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750957763.2376742, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750958074.7233238, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750958077.8362188, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750958127.2027357, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750958129.5813935, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750958157.6829453, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750958160.2586353, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750958223.9275587, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750958226.628078, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750958320.6665552, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750958324.3348744, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750969716.3303277, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1750970460.1006122, "task": "ollama_response", "status": "failure", "details": {"error": "'Mind' object has no attribute 'performance_monitor'"}}
+{"timestamp": 1750970461.4166439, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750970783.784201, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "Downloaded file is empty."}}
+{"timestamp": 1750970786.6425717, "task": "youtube_play", "status": "success", "details": {"method": "stream"}}
+{"timestamp": 1750971017.621635, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750971021.1064794, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750971140.568916, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750971144.6284263, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750971246.223546, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750971248.6946957, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750971302.481384, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750971307.2066927, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750971374.5050223, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750971377.1012576, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750971437.5365925, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750971439.9509268, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750971533.012861, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750971540.0966387, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750971639.215018, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750971646.9122868, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750971708.8687932, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750971711.0523992, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750971792.47322, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750971793.8701577, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750971867.668036, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750971871.236686, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750971924.5948086, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750971927.233528, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750971958.541767, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750971960.976513, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750972054.818599, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750972055.8550107, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750972096.937008, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750972097.8878062, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750972141.8389568, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750972145.5167894, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750972174.1951895, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750972175.1953793, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750972442.0641215, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750972444.4455209, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750972554.5919905, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750972555.669106, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750972990.4420168, "task": "ollama_response", "status": "failure", "details": {"error": "'TrustEngine' object has no attribute 'get_trust_level'"}}
+{"timestamp": 1750972992.2895017, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750973084.184075, "task": "ollama_response", "status": "failure", "details": {"error": "'MentalHealthEngine' object has no attribute 'get_stress_levels'"}}
+{"timestamp": 1750973225.6338592, "task": "ollama_response", "status": "failure", "details": {"error": "'GoalsEngine' object has no attribute 'get_active_goals_string'"}}
+{"timestamp": 1750973227.071706, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750973319.374906, "task": "ollama_response", "status": "failure", "details": {"error": "'PsychologicalEngine' object has no attribute 'get_traits_summary'"}}
+{"timestamp": 1750973402.975292, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750973413.0918136, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750973444.8069985, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750973447.815589, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750973472.1084163, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750973473.585116, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750973531.407338, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750973532.560266, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750973600.245049, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750973603.779689, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750973758.5724585, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750973952.0108316, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750973952.372378, "task": "tts_generation", "status": "failure", "details": {"error": "'MoodEngine' object has no attribute 'get_mood_value'"}}
+{"timestamp": 1750975501.8954988, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750975503.1204958, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750975517.428282, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750975518.4751935, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750975559.9012845, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750975563.68529, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750975600.565576, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750975669.1366098, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750975670.949049, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750975720.7954917, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750975724.0910623, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750975788.342747, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750975792.7114792, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750975849.807762, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750975851.095039, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750975892.3185449, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750975895.3818467, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750975906.3712869, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750975981.8177028, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750975984.377881, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750976014.0987663, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750976014.847839, "task": "tts_generation", "status": "failure", "details": {"error": "No audio was received. Please verify that your parameters are correct."}}
+{"timestamp": 1750976045.196669, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750976046.0879548, "task": "tts_generation", "status": "failure", "details": {"error": "No audio was received. Please verify that your parameters are correct."}}
+{"timestamp": 1750976114.6061184, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750976115.6223722, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750976170.2214217, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750976172.3762925, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750976213.7078106, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750976215.9979556, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750976245.6756325, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750976246.6887982, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750976324.9669642, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750976327.0863683, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750978348.8944418, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750978402.3179414, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750978429.9182806, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750979229.9714131, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750979428.851453, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750979518.7584891, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750979565.6551483, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750979568.4070113, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750979614.2664886, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750979646.8447454, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750979649.6045244, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750979692.258583, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750979738.1229534, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750979740.731525, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750979777.076166, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750979779.4651775, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750979829.7912629, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750979832.1696954, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750979885.0757604, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750979887.6531773, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750980073.3930874, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750980078.3985372, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750980331.1815689, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750980334.0128393, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750980425.4637258, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750980428.9376976, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750980666.1162884, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750980670.9109488, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750980780.2370071, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750980783.7843015, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750980862.68501, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750981017.4713356, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750981019.602169, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750981047.9076214, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750981096.9366267, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750981133.847265, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750981135.1032548, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750981226.490104, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750981269.3459575, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750981272.278531, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750981301.2064903, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750981304.9833932, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750984656.6256392, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750984717.4314723, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750984765.0395992, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750990193.085534, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750990735.3558106, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750992844.2995052, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750992849.813754, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750993353.2921603, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750993399.9435294, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750993468.3589268, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750993471.8593595, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750994458.666399, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1750994461.8449965, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750994510.005028, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1750994623.9112723, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751010706.2926054, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751050162.4846117, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751053561.6780076, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751053668.9009666, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751053865.5147781, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751053931.0987751, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751054105.700059, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751054136.4177272, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751054217.6267018, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751054246.0098252, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751054295.2643702, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751054400.9845233, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751054408.6057224, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751054533.8924513, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751054607.7024825, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751054817.4003956, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751055233.5138237, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751055312.6825218, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751055793.6469007, "task": "ollama_response", "status": "failure", "details": {"error": "'MoodEngine' object has no attribute 'get_response_temperature'"}}
+{"timestamp": 1751055852.4992454, "task": "ollama_response", "status": "failure", "details": {"error": "'MoodEngine' object has no attribute 'get_response_temperature'"}}
+{"timestamp": 1751055956.1730602, "task": "ollama_response", "status": "failure", "details": {"error": "'MoodEngine' object has no attribute 'get_response_temperature'"}}
+{"timestamp": 1751056348.382227, "task": "ollama_response", "status": "failure", "details": {"error": "'VoiceModulationEngine' object has no attribute 'get_temperature_for_mood'"}}
+{"timestamp": 1751056399.1977158, "task": "ollama_response", "status": "failure", "details": {"error": "'VoiceModulationEngine' object has no attribute 'get_temperature_for_mood'"}}
+{"timestamp": 1751056764.857889, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751056785.413054, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751056837.3712656, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751056884.704003, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751059426.7473664, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751059658.2863193, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751059690.1636431, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751060096.0255597, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751060138.5061202, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751060142.5958555, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751060168.0047605, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751060170.3945014, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751060178.6397016, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751060298.662778, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751060299.8030858, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751060332.5364766, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751060709.1612892, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751060712.329987, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751063676.0733812, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751063989.0061965, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751064228.6206295, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751064455.673086, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751064698.6906495, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751065693.3323686, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751066124.4227552, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751066383.672718, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751066500.9156961, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751066603.3021386, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751066641.5755599, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751066670.570869, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751066679.5754926, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751066708.8789937, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751066711.6770113, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751066720.7526355, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751066724.680028, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751093487.9994469, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751104327.6689093, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751104425.2083542, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751104477.115366, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751104901.348067, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751130017.602893, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751130054.0675788, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751130056.441673, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751130083.3719387, "task": "ollama_response", "status": "failure", "details": {"error": ""}}
+{"timestamp": 1751134011.8234391, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751134232.3616247, "task": "ollama_response", "status": "failure", "details": {"error": ""}}
+{"timestamp": 1751137896.4095767, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751137996.5129204, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751138337.6073701, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751138344.09598, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751138347.8431985, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751138517.9236338, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751138667.788773, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751138693.4199982, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751138746.075036, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751142701.395677, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751142787.7745028, "task": "whisper_transcription", "status": "failure", "details": {"error": "Unable to allocate 23.4 GiB for an array with shape (52320, 60001) and data type float64"}}
+{"timestamp": 1751142913.5981915, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751142920.4971902, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751142959.854319, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751142964.9474308, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751142992.025293, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751143001.4138145, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751143072.8805506, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751143084.527342, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751143134.6301928, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751143983.9123843, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751143992.899893, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751144027.57215, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751144036.8951406, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751144109.6223547, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751144116.9069963, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751144156.4313426, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751144165.9821603, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751144248.2578027, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751144365.1654131, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751144376.6558352, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751144411.025196, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751144441.7221727, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751144564.286349, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751144612.1640677, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751146210.9944975, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751151251.7666838, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751151490.6290803, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751151637.7461462, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751152128.969558, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751152201.0256722, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751152293.3739877, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751152327.9789963, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751152455.3412056, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751152646.2792058, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751152741.7984447, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751152873.070215, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751153010.7012095, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751153300.03354, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751155619.6716692, "task": "ollama_response", "status": "failure", "details": {"error": "'MoodEngine' object has no attribute 'get_mood'"}}
+{"timestamp": 1751155648.2736385, "task": "ollama_response", "status": "failure", "details": {"error": "'MoodEngine' object has no attribute 'get_mood'"}}
+{"timestamp": 1751156034.2520356, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751156071.7359736, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751156072.9248247, "task": "ollama_response", "status": "failure", "details": {"error": "'MoodEngine' object has no attribute 'get_mood'"}}
+{"timestamp": 1751157103.5032225, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751157137.1545503, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751157138.5595012, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751157184.0834153, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751157188.1693783, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751157475.722447, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "\u001b[0;31mERROR:\u001b[0m [generic] 'pokemon' is not a valid URL. Set --default-search \"ytsearch\" (or run  yt-dlp \"ytsearch:pokemon\" ) to search YouTube"}}
+{"timestamp": 1751157516.7567136, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751157574.984316, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751157637.9723978, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751158855.2330556, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751158861.8307104, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751158901.7629325, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751159230.8283076, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "Downloaded file is empty."}}
+{"timestamp": 1751159233.487113, "task": "youtube_play", "status": "success", "details": {"method": "stream"}}
+{"timestamp": 1751166817.4695246, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751166819.852423, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751166860.831392, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751166906.318616, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751166908.6820333, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751166969.8410208, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751181171.6386592, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751181174.59627, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751184914.8314793, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751184919.075489, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751185016.2068987, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751185042.3839278, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751185046.346876, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751185083.598582, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751185088.0696447, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751185208.379818, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751185260.8041353, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751185263.6898644, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751185329.623067, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751185332.2512503, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751185379.5866504, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751185437.724032, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751185494.9256275, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751185535.0955777, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751185548.676849, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751185633.3158312, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751185710.996027, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751185717.510274, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751185830.5663552, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751185834.505207, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751185904.4701314, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751185916.999114, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751187610.3614185, "task": "ollama_response", "status": "failure", "details": {"error": ""}}
+{"timestamp": 1751187611.3401372, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751187659.9631586, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751187662.597294, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751187725.05352, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751187728.2714095, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751199453.9089048, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751199455.5117471, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751199489.7415802, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751203255.550625, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751203257.6501975, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751203301.6935844, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751203502.1811135, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751203504.9928548, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751213229.328956, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751213933.2919273, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751213942.6926725, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751213954.3206213, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751213966.4634764, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751213993.6407702, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751221814.2025557, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751222116.5526621, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751222280.9566615, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751222310.4596596, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751222444.4322839, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751312329.5846825, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751312381.784855, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751312447.714496, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751312477.6726103, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751312530.0429595, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751312571.9442608, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751312575.3320038, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751312605.1216495, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751312608.301104, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751312633.311706, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751312678.9490752, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751312790.317467, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751312816.027314, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751312863.479281, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751312915.3227112, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751312929.2735868, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751312932.7519581, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751312953.0558155, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751313061.3312607, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751313066.1549923, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751313093.2404935, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751313098.045059, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751313132.5492587, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751313158.6252244, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751313162.5085762, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751313189.483859, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751313192.8788776, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751313228.7905805, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751313275.452161, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751313339.2972424, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751313392.3234606, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751313431.3934538, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751313467.502967, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751313486.017086, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751313576.3611517, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751313616.6657457, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751313652.7982256, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751313656.4974685, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751313678.6417198, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751313737.727424, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751313742.0940468, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751313807.2955167, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751313809.4987879, "task": "tts_generation", "status": "success", "details": {}}
+{"timestamp": 1751313964.4428756, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751314242.1524105, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751314261.1202018, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751314264.0793593, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751314278.192213, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751314281.2566912, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751314302.9928682, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751314305.652273, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751315448.4803572, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751315718.523075, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751315720.9601564, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751315737.2207298, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751315759.9275732, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751316749.3756835, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751318052.8103843, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751318083.5267181, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751319437.7991636, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "\u001b[0;31mERROR:\u001b[0m Unsupported URL: https://suno.com/song/0f15f7de-1732-427a-8531-516f68a00bc1"}}
+{"timestamp": 1751319469.3610997, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "\u001b[0;31mERROR:\u001b[0m Unsupported URL: https://suno.com/song/07dcaa30-1fd7-41f9-be2e-beee77fde227"}}
+{"timestamp": 1751319789.7036777, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "Downloaded file is empty."}}
+{"timestamp": 1751319792.8402705, "task": "youtube_play", "status": "success", "details": {"method": "stream"}}
+{"timestamp": 1751319819.5635886, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751319961.9019935, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "Downloaded file is empty."}}
+{"timestamp": 1751319964.7484555, "task": "youtube_play", "status": "success", "details": {"method": "stream"}}
+{"timestamp": 1751320239.079824, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "Downloaded file is empty."}}
+{"timestamp": 1751320241.6500566, "task": "youtube_play", "status": "success", "details": {"method": "stream"}}
+{"timestamp": 1751321513.2592075, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "Downloaded file is empty."}}
+{"timestamp": 1751321515.907987, "task": "youtube_play", "status": "success", "details": {"method": "stream"}}
+{"timestamp": 1751322332.3395927, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751322347.069977, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751322544.5162053, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751322554.6616983, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751322633.8296084, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751322661.188066, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751322685.4109342, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751322721.0394087, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751323005.6177413, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751324679.9260104, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751325097.9910245, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751325141.2717445, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751325164.0620773, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751325167.7554655, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751325193.2745745, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751325195.8514473, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751325223.40187, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751325242.709204, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751325282.5596232, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751325324.2019417, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751328901.5548885, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751329024.4235787, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751329532.3127334, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751330154.9026008, "task": "ollama_response", "status": "success", "details": {}}
+{"timestamp": 1751331023.4506273, "task": "chat_request", "status": "start", "details": {"user": "web_guest_N_fWZD75_j5NVqi_AAAD"}}
+{"timestamp": 1751331076.5703661, "task": "chat_request", "status": "start", "details": {"user": "web_guest_N_fWZD75_j5NVqi_AAAD"}}
+{"timestamp": 1751331506.1439464, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751331506.148502, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751331516.9622953, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751331516.9638054, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751331901.9549506, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751331901.957474, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751331913.780065, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751331913.7805815, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751331925.0904117, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751331925.0904117, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751331939.6940627, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751331939.6950784, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751332488.1207416, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751332488.1242766, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751332492.6585617, "task": "chat_response", "status": "success", "details": {"type": "meta"}}
+{"timestamp": 1751332536.4444213, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751332536.4459672, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751332538.8283088, "task": "chat_response", "status": "success", "details": {"type": "meta"}}
+{"timestamp": 1751332568.3453963, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751332568.3453963, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751332570.324314, "task": "chat_response", "status": "success", "details": {"type": "meta"}}
+{"timestamp": 1751332939.272661, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751332939.2748146, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751332942.196098, "task": "chat_response", "status": "success", "details": {"type": "meta"}}
+{"timestamp": 1751332978.397967, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751332978.3994765, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751333314.8684492, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751333663.275413, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751333931.965807, "task": "chat_request", "status": "start", "details": {"user": "web_guest_KINJuRvPYgMN1rmgAAAD"}}
+{"timestamp": 1751333981.4267402, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751334189.5238256, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751334316.9854748, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751334319.809396, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334344.632658, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751334346.9459264, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334358.3643181, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751334360.5484176, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334370.4802873, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751334372.674977, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334394.276358, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751334396.4225583, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334409.2675233, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751334411.3265634, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334433.4411786, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751334435.92787, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334451.0227852, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751334453.45987, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334470.527853, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751334472.9197903, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334483.4769042, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751334485.8642163, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334524.3146806, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751334527.0817397, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334539.4292276, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751334541.261128, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334574.7936344, "task": "chat_request", "status": "start", "details": {"user": "local_user"}}
+{"timestamp": 1751334577.3760378, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334762.1069741, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751334764.56332, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334780.0553603, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751334782.398122, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334800.9460704, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751334803.5947595, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334840.133571, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751334842.6053772, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334878.0791242, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751334880.503903, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334905.651967, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751334907.8948572, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334927.5409865, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751334930.462235, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751334968.6040356, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751334971.2911077, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751335230.8539429, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751335233.452522, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751335248.1172087, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751335250.8234746, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751335270.578082, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751335273.5700498, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751335297.7715824, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751335301.0935736, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751335379.721449, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751335383.839365, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751335418.0172513, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751335420.7499516, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751335479.0271652, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751335482.2962537, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751335552.3124404, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751335555.7536407, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751336831.4600894, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751336862.7116017, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751336904.2911696, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751336934.7144172, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751336971.0182824, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751337009.4060283, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751337334.4570706, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751337356.8572748, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751337396.5998807, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751338122.7656472, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751338125.341417, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751338153.5546634, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751338156.2909274, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751338189.5495985, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751338191.9673696, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751338220.987911, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751338224.1814837, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751338252.3272238, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751338254.8628883, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751338430.2108731, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751338433.5477526, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751338466.6443958, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751338469.5263047, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751338499.403423, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751338502.8201087, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751338539.3654134, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751338541.9681866, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751338572.0480623, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751338575.463402, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751338612.433101, "task": "chat_request_start", "status": "info", "details": {"user": "roommate_chat"}}
+{"timestamp": 1751338616.0949857, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751338875.295108, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751338869920-8hix7p9cf"}}
+{"timestamp": 1751338878.0262198, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751338920.3812842, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751338869920-8hix7p9cf"}}
+{"timestamp": 1751338922.689082, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751338929.2125819, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751338869920-8hix7p9cf"}}
+{"timestamp": 1751338931.7647665, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751338944.7853925, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751338869920-8hix7p9cf"}}
+{"timestamp": 1751338947.3904831, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751339033.5673482, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751339036.1187758, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751369147.343377, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751369150.9500434, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751370054.7107224, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751370058.156748, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751370198.063303, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751370202.1054041, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751370274.3817236, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751370278.1533344, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751370396.018465, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751370400.2164652, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751370523.0152547, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751370527.4130106, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751370600.3734334, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751370604.137627, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751370648.9939415, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751370653.107823, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751370707.5133004, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751370710.0921097, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751370763.2072344, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751370766.3326159, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751370818.6938827, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751370821.7126474, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751370844.4334557, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751370847.0877187, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751370905.3270721, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751370908.572169, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751370959.0379293, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751370962.526206, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751371032.072521, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751371035.2486548, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751371183.3173125, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751371186.0650845, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751371206.234602, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751371209.3169427, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751371242.997439, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751371245.2283018, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751371267.3092496, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751371269.7369163, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751371293.6706254, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751371298.012733, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751371325.2047415, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751371327.619178, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751371346.4603941, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751371349.1630874, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751371371.1037037, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751371374.7839913, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751371406.0180495, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751371409.6189804, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751371453.2239926, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751371456.9899702, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751371508.168728, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751371511.3056905, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751371526.7553144, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751371530.2082102, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751371551.9590695, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751371554.4614453, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751371584.0358455, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751371587.4071953, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751371783.5078735, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751371786.558807, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751371827.2891061, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751371830.484603, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751371949.4809966, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751371952.2944102, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751371967.3887744, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751371971.0773365, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751372047.853768, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751372051.7217064, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751372110.309028, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751372113.852043, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751372134.4177327, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751372137.9287531, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751372166.1656709, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751372169.4808738, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751372186.770061, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751372191.8209963, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751372585.0361967, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751372587.7584827, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751372631.3417857, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751372635.1837296, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751372688.4582276, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751372691.8518996, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751372715.106133, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751372718.3048441, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751372774.8595526, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751372779.1778657, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751372807.4614425, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751372813.011949, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751372857.6375284, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751372863.3885257, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751372899.4741724, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751372903.2111228, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751372921.219493, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751372928.5811644, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751372969.0359955, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751372973.1211095, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751372992.6802716, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751372995.8274171, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751373026.6407447, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751373030.9954371, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751373053.428426, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751373056.747183, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751373079.1847267, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751373083.10728, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751383426.2811265, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751338869920-8hix7p9cf"}}
+{"timestamp": 1751383437.1336474, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751384120.3570547, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751384123.3540647, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751384136.4502974, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751338869920-8hix7p9cf"}}
+{"timestamp": 1751384139.1351306, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751384153.3212562, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751384156.6608381, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751402342.2305653, "task": "chat_request_start", "status": "info", "details": {"user": "531896743063846943"}}
+{"timestamp": 1751402346.175647, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751402457.9309301, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751402463.350357, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751402493.2172737, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751400252543-ukinaj4r8"}}
+{"timestamp": 1751402496.142344, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751403291.1806185, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751403294.7893877, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751403313.9244876, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751403317.6740718, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751404678.7680354, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751338869920-8hix7p9cf"}}
+{"timestamp": 1751404681.4771907, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751405155.8215592, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751400252543-ukinaj4r8"}}
+{"timestamp": 1751405165.280565, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751405204.2329779, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751338869920-8hix7p9cf"}}
+{"timestamp": 1751405211.2703812, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751406687.1140451, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751338869920-8hix7p9cf"}}
+{"timestamp": 1751406696.7714317, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751406726.6466415, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751338869920-8hix7p9cf"}}
+{"timestamp": 1751406739.619407, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751408603.552929, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751338869920-8hix7p9cf"}}
+{"timestamp": 1751408610.9133766, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751413780.8763828, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751413793.491292, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751417676.1182418, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751568932.963958, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751568932.983792, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751568947.539625, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751569161.863715, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751569169.8484623, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751569483.7281377, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751338869920-8hix7p9cf"}}
+{"timestamp": 1751569490.5589132, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751569634.755702, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751338869920-8hix7p9cf"}}
+{"timestamp": 1751569645.2862692, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751573053.9477813, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751338869920-8hix7p9cf"}}
+{"timestamp": 1751573064.6952055, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751582610.6568813, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751582672.6467164, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751582700.830004, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751582714.8870971, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751582774.0069666, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751582794.0505924, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751582834.0354657, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751582881.9134026, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751582899.1355374, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751582925.0934167, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751582999.7429614, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751583015.3066463, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751583057.7457767, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751583066.601405, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751583086.8762379, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751583099.6273232, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751583123.05463, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751583132.8695571, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751583177.891675, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751583250.755559, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751583293.272216, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751583304.792834, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751583367.3561106, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751583379.2562342, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751583443.6903267, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751583457.277134, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751585315.6660562, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751582304859-raty8a881"}}
+{"timestamp": 1751585324.069669, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751585382.52992, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751582304859-raty8a881"}}
+{"timestamp": 1751585393.3732543, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751589523.7008371, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751582304859-raty8a881"}}
+{"timestamp": 1751589532.8937635, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751589563.3352828, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751582304859-raty8a881"}}
+{"timestamp": 1751589572.952064, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751590034.652184, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751590045.2671921, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751590561.83696, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751590570.5790446, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751590831.7936656, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751590840.0322154, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751590896.4573965, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751590904.4732156, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751590956.5794291, "task": "chat_request_start", "status": "info", "details": {"user": "solonaras"}}
+{"timestamp": 1751590964.2679172, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751591008.2431269, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751591027.391825, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751591143.334273, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751591155.9181817, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751663840.1020734, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751663850.1856086, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751663895.78743, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751663903.495598, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751672538.37416, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751672553.9092917, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751672767.7112045, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751672823.800338, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751672826.564851, "task": "tts_generation", "status": "failure", "details": {"error": "ffmpeg was not found."}}
+{"timestamp": 1751673316.116459, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751673334.421991, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751673433.0454016, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751673452.7364419, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751673530.842761, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751673565.5269604, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751673661.3934305, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751673694.290003, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751673748.4490654, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751673761.0529559, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751673802.2409866, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751673874.0145237, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751674021.8812716, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751674043.2207513, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751674127.4357, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751674152.0337799, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751745667.393924, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751745770.0955322, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751745790.1483345, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751745837.8012567, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751745860.3549137, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751745869.0584989, "task": "tts_generation", "status": "failure", "details": {"error": "ffmpeg was not found."}}
+{"timestamp": 1751745924.0446851, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751745943.8644211, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751745947.0560246, "task": "tts_generation", "status": "failure", "details": {"error": "ffmpeg was not found."}}
+{"timestamp": 1751746702.642344, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751746733.696238, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751746758.3246603, "task": "tts_generation", "status": "failure", "details": {"error": "ffmpeg was not found."}}
+{"timestamp": 1751747048.616946, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751747092.4343762, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751747096.6329305, "task": "tts_generation", "status": "failure", "details": {"error": "ffmpeg was not found."}}
+{"timestamp": 1751748952.7267885, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751748961.7784197, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751748964.2040966, "task": "tts_generation", "status": "failure", "details": {"error": "ffmpeg was not found."}}
+{"timestamp": 1751749067.2355862, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751749076.8515537, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751749124.663029, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751749137.3514903, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751749193.3083348, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751749206.1247668, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751749514.1097167, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751749524.9547145, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751749558.447808, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751749573.792386, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751749975.460551, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751749987.9782543, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751751269.1792803, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751751280.5881631, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751751327.9029772, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751751339.5334558, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751751539.4862115, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751751551.0928879, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751751642.8126214, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751751652.8798618, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751751819.168464, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751751826.7486196, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751752175.398288, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751752184.4701655, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751752445.7969742, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751752479.0857258, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751582304859-raty8a881"}}
+{"timestamp": 1751752490.94047, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751752511.8141904, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751752525.5395517, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751752541.6807997, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751752623.0756109, "task": "chat_request_start", "status": "info", "details": {"user": "web-1751582304859-raty8a881"}}
+{"timestamp": 1751752627.108453, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751752635.1971154, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751752650.583128, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751752762.0139687, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751752829.2819076, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751753301.7201662, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751753313.667764, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751753389.1259117, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751753403.4218369, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751753520.0085225, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751753529.0548646, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751753575.1623695, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751753585.8331041, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751753650.4907887, "task": "chat_request_start", "status": "info", "details": {"user": "550782786013757442"}}
+{"timestamp": 1751753661.2742481, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751753731.958738, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751753744.1957514, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751753783.479434, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751753794.4022796, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751753826.2509663, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751753837.2343702, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751754795.08694, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751754804.8260818, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751754819.7538517, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751754830.4709036, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751754924.5177236, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "Downloaded file is empty."}}
+{"timestamp": 1751755091.7213495, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "Downloaded file is empty."}}
+{"timestamp": 1751755182.2497332, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "Downloaded file is empty."}}
+{"timestamp": 1751755411.2515285, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "Downloaded file is empty."}}
+{"timestamp": 1751755587.1123867, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "Downloaded file is empty."}}
+{"timestamp": 1751755590.2447443, "task": "youtube_play", "status": "failure", "details": {"method": "stream", "error": "ffmpeg was not found."}}
+{"timestamp": 1751755629.6494045, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "Downloaded file is empty."}}
+{"timestamp": 1751755632.7139246, "task": "youtube_play", "status": "failure", "details": {"method": "stream", "error": "ffmpeg was not found."}}
+{"timestamp": 1751757377.426137, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751757388.5238068, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751757467.4558096, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751757540.658396, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751757543.2404675, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "\u001b[0;31mERROR:\u001b[0m [DRM] The requested site is known to use DRM protection. It will \u001b[0;94mNOT\u001b[0m be supported.\n       Please \u001b[0;31mDO NOT\u001b[0m open an issue, unless you have evidence that the video is not DRM protected"}}
+{"timestamp": 1751757655.300714, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "\u001b[0;31mERROR:\u001b[0m [DRM] The requested site is known to use DRM protection. It will \u001b[0;94mNOT\u001b[0m be supported.\n       Please \u001b[0;31mDO NOT\u001b[0m open an issue, unless you have evidence that the video is not DRM protected"}}
+{"timestamp": 1751757904.1504478, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "Downloaded file is empty."}}
+{"timestamp": 1751934763.6557515, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "Downloaded file is empty."}}
+{"timestamp": 1751934765.7647989, "task": "youtube_play", "status": "failure", "details": {"method": "stream", "error": "ffmpeg was not found."}}
+{"timestamp": 1751934858.965138, "task": "youtube_play", "status": "failure", "details": {"method": "download", "error": "Downloaded file is empty."}}
+{"timestamp": 1751934861.759251, "task": "youtube_play", "status": "failure", "details": {"method": "stream", "error": "ffmpeg was not found."}}
+{"timestamp": 1751937075.397443, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751937094.644523, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751937159.8460786, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751937171.289749, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751937338.129112, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751937356.2641914, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751938430.7376754, "task": "chat_request_start", "status": "info", "details": {"user": "531896743063846943"}}
+{"timestamp": 1751938444.7898006, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751941400.7594452, "task": "whisper_transcription", "status": "success", "details": {}}
+{"timestamp": 1751941400.7735598, "task": "chat_request_start", "status": "info", "details": {"user": "local_user"}}
+{"timestamp": 1751941415.6513474, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751942012.859739, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751942027.3433356, "task": "chat_response", "status": "success", "details": {"type": "standard"}}
+{"timestamp": 1751942037.8032355, "task": "chat_request_start", "status": "info", "details": {"user": "142412011584618496"}}
+{"timestamp": 1751942052.9227545, "task": "chat_response", "status": "success", "details": {"type": "standard"}}

@@ -46,7 +46,7 @@ class PerformanceMonitor:
                         if (now - entry.get("timestamp", 0)) < ANALYSIS_WINDOW_SECONDS:
                             task = entry.get("task")
                             status = entry.get("status")
-                            if task and status:
+                            if task and status in ['success', 'failure']:
                                 task_stats[task][status] += 1
                     except json.JSONDecodeError:
                         continue # Skip corrupted lines

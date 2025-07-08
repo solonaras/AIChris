@@ -111,6 +111,7 @@ class CommandHandler:
         self.text_commands = {
             "help": self.show_help,
             "play": self.play_song,
+            "playlocal": self.play_local_music,
             "skip": self.skip_song,
             "pause": self.pause_song,
             "resume": self.resume_song,
@@ -338,6 +339,40 @@ class CommandHandler:
             self.chatbot.send_to_discord(f"!suno {url}")
         else:
             self._execute_and_respond("<b style=\"color:#ff5555\">Error:</b> Please provide a Suno URL. Usage: /suno [url]")
+
+    def play_local_music(self, args: list):
+        """Plays a local music file (mp3, wav, etc.) from the user's PC."""
+        import os
+        try:
+            import pygame
+        except ImportError:
+            self._execute_and_respond("<b style=\"color:#ff5555\">Error:</b> Pygame is not installed. Please install it with: pip install pygame")
+            return
+
+        if not args:
+            self._execute_and_respond("<b style=\"color:#ff5555\">Error:</b> Please provide a file path. Usage: /playlocal [filepath]")
+            return
+        filepath = " ".join(args)
+        if not os.path.isfile(filepath):
+            self._execute_and_respond(f"<b style=\"color:#ff5555\">Error:</b> File not found: {filepath}")
+            return
+        if not filepath.lower().endswith((".mp3", ".wav", ".ogg", ".flac")):
+            self._execute_and_respond("<b style=\"color:#ff5555\">Error:</b> Unsupported file type. Supported: mp3, wav, ogg, flac.")
+            return
+
+        def play_music():
+            try:
+                if not pygame.mixer.get_init():
+                    pygame.mixer.init()
+                pygame.mixer.music.load(filepath)
+                pygame.mixer.music.play()
+                self._execute_and_respond(f"<b style=\"color:#ffb86c\">System:</b> Playing local file: {filepath}")
+                while pygame.mixer.music.get_busy():
+                    pygame.time.Clock().tick(10)
+                self._execute_and_respond(f"<b style=\"color:#ffb86c\">System:</b> Finished playing: {filepath}")
+            except Exception as e:
+                self._execute_and_respond(f"<b style=\"color:#ff5555\">Error:</b> Could not play file: {e}")
+        self._run_in_thread(play_music)
 
 
 

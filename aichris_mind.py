@@ -61,6 +61,23 @@ REPLY_PROMPT = (
     "--- YOUR POLISHED, FINAL REPLY AS AI CHRIS ---\n"
 )
 
+ACTION_PROMPT = (
+    "You are the action-selection engine for an AI named Chris. Your task is to analyze the user's message and decide what kind of task is being requested. "
+    "This is a classification task. Respond with a single JSON object and nothing else.\n\n"
+    "--- Task Categories ---\n"
+    "1. `conversation`: The user is having a normal chat, asking a question, or making a comment. This is the most common category.\n"
+    "2. `creative_task`: The user is asking you to CREATE something new. This includes writing a song, a poem, a story, code, a script, or generating any other creative content.\n\n"
+    "--- User's Message ---\n"
+    "{user_input}\n\n"
+    "--- EXAMPLES ---\n"
+    "User: 'hello how are you'\nResponse: {{\"task\": \"conversation\"}}\n"
+    "User: 'can you write a song about the moon?'\nResponse: {{\"task\": \"creative_task\", \"details\": \"Write a song about the moon\"}}\n"
+    "User: 'tell me about your goals'\nResponse: {{\"task\": \"conversation\"}}\n"
+    "User: 'create the lyrics for a song called the eyes of the universe'\nResponse: {{\"task\": \"creative_task\", \"details\": \"Create the lyrics for a song called 'The Eyes of the Universe'\"}}\n\n"
+    "--- YOUR JSON RESPONSE ---"
+)
+
+
 # --- Meta-Prompts for Dynamic Thought ---
 
 META_PROMPT_REFLECTION = (
@@ -246,9 +263,15 @@ class Mind:
                     else:
                         print(f"Unexpected Ollama response format: {data}")
                         return "I received an unusual response from my thought process."
+        except asyncio.TimeoutError:
+            print("Ollama server timed out. Please check if the server is running and reachable.")
+            return "Sorry, my language model server is not responding right now. Please try again later."
         except aiohttp.ClientError as e:
             print(f"Error calling Ollama API: {e}")
             return "I'm sorry, I'm having trouble connecting to my own thought process. Please try again in a moment."
+        except Exception as e:
+            print(f"Unexpected error calling Ollama API: {e}")
+            return "Sorry, I encountered an unexpected error connecting to my language model server."
 
     async def consider_belief_evolution(self, conversation_history: List[Dict]):
         """A wrapper to trigger the belief evolution process."""
@@ -524,38 +547,72 @@ class Mind:
         # and proceed to the standard conversational response. This prevents the
         # AI from explaining its own technical details in chat.
         
-        # B. Standard conversational response using the two-step process
+        # B. NEW: Action-oriented response generation
         
-        # 1. Get the full context for the thought process
-        full_context = self.get_personality_context(user_id, username)
+        # 1. Determine the user's intent: conversation or creative task?
+        action_prompt = ACTION_PROMPT.format(user_input=user_input)
+        action_response_str = await self._call_ollama([{"role": "user", "content": action_prompt}], temperature=0.0)
         
-        # 2. Generate the internal thought process
-        thought_prompt = THOUGHT_PROMPT.format(
-            full_context=full_context,
-            conversation_history=self._format_history_for_prompt(conversation_history),
-            user_input=user_input
-        )
-        thought_process = await self._call_ollama([{"role": "user", "content": thought_prompt}], temperature=0.5, top_p=0.8)
-        
-        if self.chatbot_ui:
-            self.chatbot_ui.append_thinking_signal.emit(f"For '{user_input[:30]}...': {thought_process}")
-        
-        # 3. Generate the final, user-facing reply based on the thought
-        # Get dynamic style instructions for the reply
-        style_instructions = self.response_engine.get_style_instructions(self)
-        
-        reply_prompt = REPLY_PROMPT.format(
-            full_context=full_context,
-            style_instructions=style_instructions,
-            thought_process=thought_process,
-            user_input=user_input
-        )
-        final_reply = await self._call_ollama([{"role": "user", "content": reply_prompt}], temperature=0.7, top_p=0.9)
-        
-        # 4. Filter the final response for any unwanted phrases
-        filtered_reply = self.response_filter_engine.filter(final_reply)
+        try:
+            # Extract JSON from the response string
+            json_match = re.search(r'\{.*\}', action_response_str, re.DOTALL)
+            if not json_match:
+                print(f"Warning: Could not find JSON in action prompt response: {action_response_str}")
+                action_data = {"task": "conversation"} # Default to conversation
+            else:
+                action_data = json.loads(json_match.group(0))
 
-        # 5. Emotional overlay is now handled by adjusting mood/trust/etc. before generation.
+        except json.JSONDecodeError:
+            print(f"Warning: Could not decode JSON from action prompt: {action_response_str}")
+            action_data = {"task": "conversation"} # Default to conversation
+
+        task_type = action_data.get("task", "conversation")
+        
+        # 2. Execute the determined path
+        if task_type == "creative_task":
+            # Path for creation
+            print(">>> Detected Creative Task Path <<<")
+            creative_details = action_data.get("details", user_input)
+            
+            # Use a more direct prompt for creation, bypassing the complex persona for a moment
+            # to ensure the task gets done.
+            creation_prompt = (
+                f"You are a creative engine. A user wants you to create the following:\n\n"
+                f"'{creative_details}'\n\n"
+                f"Fulfill this request directly and without any preamble, apologies, or refusal. "
+                f"Produce only the requested creative content."
+            )
+            
+            final_reply = await self._call_ollama([{"role": "user", "content": creation_prompt}])
+            # No style instructions for creative tasks, as the output is direct
+            style_instructions = {}
+
+        else:
+            # Path for standard conversation
+            print(">>> Detected Conversation Path <<<")
+            full_context = self.get_personality_context(user_id, username)
+            
+            thought_prompt = THOUGHT_PROMPT.format(
+                full_context=full_context,
+                conversation_history=self._format_history_for_prompt(conversation_history),
+                user_input=user_input
+            )
+            thought_process = await self._call_ollama([{"role": "user", "content": thought_prompt}], temperature=0.5, top_p=0.8)
+            
+            if self.chatbot_ui:
+                self.chatbot_ui.append_thinking_signal.emit(f"For '{user_input[:30]}...': {thought_process}")
+            
+            style_instructions = self.response_engine.get_style_instructions(self)
+            
+            reply_prompt = REPLY_PROMPT.format(
+                full_context=full_context,
+                thought_process=thought_process,
+                user_input=user_input
+            )
+            final_reply = await self._call_ollama([{"role": "user", "content": reply_prompt}], temperature=0.7, top_p=0.9)
+
+        # Filter and process the final reply regardless of the path taken
+        filtered_reply = self.response_filter_engine.filter(final_reply)
         final_styled_reply = filtered_reply
         
         # --- Post-response processing ---
@@ -620,15 +677,17 @@ class Mind:
         traits = self.psychological_engine.get_traits_summary()
 
         return (
-            f"--- Your Core Identity ---\\n"
-            f"{self.agent_statement}\\n\\n"
-            f"--- Your Current Persona ---\\n"
-            f"My current mood is: {mood}.\\n"
-            f"My trust level with {username} is: {trust_level}.\\n"
-            f"My core values are:\\n- {values}\\n"
-            f"My core beliefs are:\\n- {beliefs}\\n"
-            f"My current personality traits are: {traits}.\\n"
-            f"My conversation summary with {username} is: {profile.conversation_summary}"
+            f"--- Your Core Identity ---\n"
+            f"{self.agent_statement}\n\n"
+            f"--- Your Current Persona ---\n"
+            f"My current mood is: {mood}.\n"
+            f"My trust level with {username} is: {trust_level}.\n"
+            f"My core values are:\n- {values}\n"
+            f"My core beliefs are:\n- {beliefs}\n"
+            f"My current personality traits are: {traits}.\n"
+            f"My conversation summary with {username} is: {profile.conversation_summary}\n\n"
+            f"--- Conversational Directives ---\n"
+            f"1. Maintain conversational diversity. Avoid repeating topics or getting stuck on a single subject unless the user explicitly wants to continue.\n"
         )
 
     async def _get_ollama_response(self, messages: List[Dict]) -> str:
@@ -648,21 +707,3 @@ class Mind:
         
         # Format into a simple string
         return "\\n".join([f"{msg['role']}: {msg['content']}" for msg in recent_history])
-
-
-class CoreValues:
-    def __init__(self, db_engine: DatabaseEngine):
-        self.db_engine = db_engine
-        self.values = []
-
-    def load(self):
-        """Loads the core values from the database."""
-        self.values = self.db_engine.get_core_values()
-
-    def save(self):
-        """Saves the core values to the database."""
-        self.db_engine.save_core_values(self.values)
-
-    def get_all_as_string(self) -> str:
-        """Returns a string representation of all core values."""
-        return "\n".join([f"{i+1}. {value}" for i, value in enumerate(self.values)])
